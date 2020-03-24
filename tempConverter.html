@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature converter</title>
+    <link rel="stylesheet" type="text/css" href="celsiusFahrenheitStyle.css">
+
+    <script>
+
+        function celsiusToFahrenheit() {
+            var celsius = parseInt(document.getElementById('celsius').value);
+            var result = (celsius * 9 / 5) + 32;
+            document.getElementById('fahrenheit').value = result;
+        }
+
+        function fahrenheitToCelsius() {
+            var fahrenheit = parseInt(document.getElementById('fahrenheit').value);
+            var result = (fahrenheit - 32) * 5 / 9;
+            document.getElementById('celsius').value = result;
+            console.log(fahrenheit);
+            console.log((fahrenheit - 32) * 9/5 );
+        }
+
+    </script>
+
+</head>
+<body>
+    <h1>Temperature converter</h1>
+
+    <form id="celsiusFahrenheit-form" action="">
+
+        <h2>Temperature converter</h2>
+
+        <label for="celsius">Celsius</label>
+        <input type="text" id="celsius" name="celsius" oninput="celsiusToFahrenheit()"><br>
+        <br>
+
+        <label for="fahrenheit">Fahrenheit</label>
+        <input type="text" id="fahrenheit" name="fahrenheit" oninput="fahrenheitToCelsius()"><br>
+        <br>
+
+    </form>
+
+</body>
+</html>
